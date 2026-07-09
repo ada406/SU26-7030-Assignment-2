@@ -1,0 +1,11 @@
+# SU26-7030-Assignment-2
+The goal of  this assignment wass to build and compare simple linear regression models in python and R using jupyter notebooks. 
+Both make use of the same dataset ("regression_data") to compare the relationship between salary and years of experience. 
+Within each notebook, load the data, create a scatterplot, fit a linear regression model, and overlay the regression line on the plot. 
+# Tools and Libraries: 
+Files were created/edited in OSC OnDemand and Jupyter lab. 
+The python notebook uses pandas to import/work with the csv file, matplotlib to create the sscatterplot, and sklearn.linear_model to fit the model. 
+The R notebook uses read.csv to load the file, plot and model to create the scatter plot and fit the model, ggplot2 to overlay the regression line, and summary to evalluate the model. 
+# Results 
+Both notebooks create the same plot, as the same dataset was used, however there are very minor differences in the visual plot (ex. title placement and coloring). 
+
