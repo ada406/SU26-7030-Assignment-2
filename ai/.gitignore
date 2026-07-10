@@ -5,7 +5,3 @@ __pycache__/
 .Rhistory
 .RData
 .Rproj.user/
-output_python/
-output_r/
-output_python_cli/
-output_r_cli/
