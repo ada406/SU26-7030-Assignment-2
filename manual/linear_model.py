@@ -21,6 +21,10 @@ y = np.array(data[y_col])
 slope, intercept, r_value, p_value, std_err = linregress(x, y)
 y_pred = slope * x + intercept
 mse = mean_squared_error(y, y_pred)
+print("Slope:", slope)
+print("Intercept:", intercept)
+print("Correlation coefficient (r):", r_value)
+print("Mean Squared Error (MSE):", mse)
 
 # Plot
 plt.scatter(x, y, color="red")
