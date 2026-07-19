@@ -1,33 +1,30 @@
-# Prompts
+# Prompts used for Assignment 3 Part B (AI-assisted)
 
-This file lists the prompts used to generate the contents of the `ai/` folder.
-
----
-
-## 1. Notebooks + environment setup
-
-> I need you to anayze a dataset (@/Users/lizzieadams/Downloads/regression_data-1.csv ). We will go step by step. First create two simple jupyter notebooks (one for python and one for R). Read the dataset, create the scatter plot, fit a linear model, overlay the regression line, and then evaluate the model. Once this is done, I want to review the output. The goal is to create these files so that anyone, regardless of computer or software, can run them end-to-end without error, sso environment.yml file is necessary.
+Tool used: Cursor (AI coding assistant)
 
 ---
 
-## 2. Convert notebooks to HTML
+## 1. AI-assisted notebooks and scripts
 
-> both the notebooks look great. now i need these notebook files converted to html files. please provide these files to me for review as well.
-
----
-
-## 3. Convert notebooks to scripts + CLI variants
-
-> they look great! next, i need you to convert each notebook into a .py or .R script file. Save this file for my review as well. Also, in a separate file, modify these script files to accept command-line arguments. Save this as another separate file for my review. Remember that I need to be able to run all these files end-to-end without error!
+> I need you to complete an assignment for me. For this assignment, I needed to clone a github repository (originally at this link: https://github.com/ada406/SU26-7030-Assignment-2/commit/80ca530f82b4b10a457c805fdbb9f3bde60600c0 ), create an assignment 3 branch containing a manual folder with new notebook and script files upgrading the previous notebooks and scripts contained within the manual folder of the main branch of assignment 2. Now that those tasks have been completed, I need you to create enhanced notebooks and scripts, which should fit a linear regression model, print slope, y-intercept, correlation coefficient, and MSE to the console, show the scatter plot with original data, the regression line, and text annotations on the plot (equation, correlation coefficient). the script needs to save this output as a png file. the notebook needs markdown cells to explain what is being calculated and the interpretation of the slope, intercept, correlation coefficient, and MSE. You should do all this in a new ai folder as part of assignment 3. since i've already done the pull request, you will need to commit this to the same assignment 3 branch with a new pull request. Before you commit anything to the repository, please let me review it!
 
 ---
 
-## 4. Create README
+## 2. AI code review
 
-> looks good! The last step is to create a README.md file. In this, provide detailed instructions to download/open the files and run each of these files. Also, explain what each file is, what it does/shows. I want anyone who looks at this to understand everything about this pipeline, and to have no trouble finding and using/running these files.
+> Please review the Assignment 3 pull request / branch changes for this linear regression project (manual/ and ai/ Python and R notebooks and scripts). Act as a careful code reviewer. Provide: (1) summary of changes, (2) strengths, (3) bugs or risks, (4) style/clarity suggestions, and (5) at least three specific actionable comments. Be substantive, not generic. Focus on whether scripts print slope, intercept, r, and MSE; whether plots include scatter + fitted line + equation/r annotations; and notebook markdown interpretation quality.
+
+The review output was saved as `ai/CODE_REVIEW.md`.
 
 ---
 
-## 5. Commit and push to GitHub
+## 3. AI-generated README
 
-> great! now, I need all the files that we have created here comitted to this github repository: https://github.com/ada406/SU26-7030-Assignment-2.git . Within this repository is my "manual folder." I want all of these files in a new folder called "ai" in the repository. can you do that, and push the ai folder to the repository?
+> Generate a fresh README for this repository based on the Assignment 3 code in ai/ (and the parallel manual/ structure). Do not invent features that are not present. Include: project purpose, dataset, file layout (manual/ vs ai/), how to run the Python and R scripts, expected outputs, and main libraries. Write clear Markdown for GitHub. Save as ai/README_AI.md and do not overwrite the hand-written root or manual README.
+
+---
+
+## Notes
+
+- AI outputs were reviewed before commit.
+- At least one substantive review comment was addressed in the `ai/` code (see `CODE_REVIEW.md` → “Changes made in response to review”).

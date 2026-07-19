@@ -2,17 +2,16 @@ name: regression-analysis
 channels:
   - conda-forge
 dependencies:
-  # Python stack
   - python=3.11
   - pandas>=2.0
   - numpy>=1.24
   - matplotlib>=3.7
+  - scipy>=1.10
   - scikit-learn>=1.3
   - jupyter
   - notebook
   - ipykernel
   - nbconvert
-  # R stack
   - r-base>=4.3
   - r-irkernel
   - r-ggplot2
