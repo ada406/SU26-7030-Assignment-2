@@ -1,66 +1,112 @@
-# AI-Assisted Linear Regression (Assignment 3)
+# AI-Assisted Linear Regression — Assignment 3
 
-This folder contains the **AI-assisted** version of the Assignment 3 linear regression analysis. It mirrors the requirements completed in `manual/`, with additional documentation of prompts and review.
+This file is the **AI-generated README** for the `ai/` folder.  
+It does **not** replace the root `README.md` or `manual/README`.
 
-## Purpose
+## Project purpose
 
-Fit a simple linear regression of **Salary** on **YearsExperience**, then report:
+This repository analyzes the relationship between **years of experience** and **salary** with simple linear regression. Assignment 3 adds model diagnostics and annotated plots, and uses a Git branch / pull-request workflow.
 
-- slope
-- y-intercept
-- Pearson correlation coefficient (*r*)
-- mean squared error (MSE)
-
-Scripts also save annotated scatter plots as PNG files. Notebooks explain the calculations and interpret the results in Markdown.
+The `ai/` folder is the **AI-assisted** version of that analysis (Part B). The parallel student-built version lives in `manual/`.
 
 ## Dataset
 
-- File: `regression_data-1.csv`
-- Columns: `YearsExperience` (X), `Salary` (Y)
+| Item | Value |
+|------|--------|
+| File (Assignment 3) | `regression_data-1.csv` |
+| X (predictor) | `YearsExperience` |
+| Y (response) | `Salary` |
 
-## Contents
+There may also be an older `regression_data.csv` from Assignment 2; use `regression_data-1.csv` for the Assignment 3 `linear_model*` files.
 
-| File | Description |
-|------|-------------|
-| `linear_model.py` | Python CLI script |
-| `linear_model.R` | R CLI script |
-| `linear_model_python.ipynb` | Python notebook with Markdown explanations |
-| `linear_model_r.ipynb` | R notebook with Markdown explanations |
-| `regression_plot_python.png` | Plot saved by the Python script |
-| `regression_plot_r.png` | Plot saved by the R script |
-| `environment.yml` | Conda environment specification |
-| `setupenv.sh` | Helper to create/activate the conda env |
-| `PROMPTS.md` | Prompts used for Part B |
-| `CODE_REVIEW.md` | AI review notes and response |
-| `README_AI.md` | This AI-generated README |
+## Repository layout
 
-Older Assignment 2 artifacts (for example `linear_regression_*.py`) may still exist in this folder for history; the Assignment 3 deliverables use the `linear_model*` filenames above.
+```text
+SU26-7030-Assignment-2/
+├── README.md                 # hand-written root README
+├── manual/                   # Part A (manual work)
+│   ├── README                # hand-written manual README (do not overwrite)
+│   ├── linear_model.py
+│   ├── linear_model.R
+│   ├── linear_model_python.ipynb
+│   ├── linear_model_r.ipynb
+│   ├── regression_data-1.csv
+│   ├── regression_plot_python.png
+│   └── regression_plot_r.png
+└── ai/                       # Part B (AI-assisted)
+    ├── README_AI.md          # this file
+    ├── PROMPTS.md
+    ├── CODE_REVIEW.md
+    ├── linear_model.py
+    ├── linear_model.R
+    ├── linear_model_python.ipynb
+    ├── linear_model_r.ipynb
+    ├── regression_data-1.csv
+    ├── regression_plot_python.png
+    ├── regression_plot_r.png
+    ├── environment.yml
+    └── setupenv.sh
+```
+
+### Assignment 3 deliverables vs older files
+
+Use these **Assignment 3** names in `ai/`:
+
+- `linear_model.py`, `linear_model.R`
+- `linear_model_python.ipynb`, `linear_model_r.ipynb`
+- `regression_plot_python.png`, `regression_plot_r.png`
+
+Older Assignment 2-style files may still appear (for example `linear_regression_*.py`, `*_cli.*`, HTML exports, `output_*` folders). They are historical reference, not the primary Assignment 3 entry points.
+
+## What the AI scripts and notebooks do
+
+For both Python and R:
+
+1. Fit a linear model: `Salary ≈ intercept + slope × YearsExperience`
+2. Print to the console:
+   - slope
+   - intercept
+   - Pearson correlation coefficient (*r*)
+   - mean squared error (MSE)
+3. Plot original data points and the fitted line
+4. Annotate the plot with the equation `y = mx + b` and *r*
+5. Scripts save the figure as a PNG
+
+Notebooks also include Markdown cells that explain the calculations and interpret slope, intercept, *r*, and MSE.
 
 ## Environment setup
 
+From the `ai/` directory:
+
 ```bash
-cd ai
 bash setupenv.sh
 conda activate regression-analysis
 ```
 
-Or create the environment directly:
+Or:
 
 ```bash
 conda env create -f environment.yml
 conda activate regression-analysis
 ```
 
+Main packages used:
+
+- **Python:** pandas, NumPy, SciPy (`linregress`), scikit-learn (`mean_squared_error`), matplotlib
+- **R:** `lm`, `cor`, ggplot2
+
+On OSC, you may instead use the course environment (for example `conda activate 7030_class_1`) if it already includes these packages.
+
 ## How to run the scripts
 
-From the `ai/` directory:
-
 ```bash
+cd ai
+
 python linear_model.py regression_data-1.csv YearsExperience Salary
 Rscript linear_model.R regression_data-1.csv YearsExperience Salary
 ```
 
-### Expected console output (values approximate)
+### Expected console output (approximate)
 
 ```text
 Slope: 8285.29...
@@ -69,30 +115,26 @@ Correlation coefficient (r): 0.886...
 Mean Squared Error (MSE): 17523844...
 ```
 
-### Expected files created
+### Expected plot files
 
 - `regression_plot_python.png`
 - `regression_plot_r.png`
 
-Each plot should show the original points, the fitted line, and text for the equation `y = mx + b` and correlation *r*.
+## How to run the notebooks
 
-## Notebooks
-
-Open in JupyterLab/Notebook:
+Open in JupyterLab / Jupyter Notebook:
 
 - `linear_model_python.ipynb`
 - `linear_model_r.ipynb`
 
-Run all cells. Markdown cells explain what is calculated and how to interpret slope, intercept, *r*, and MSE.
+Run all cells. You should see printed diagnostics and an annotated scatter plot.
 
-## Main libraries
+## Related documentation in `ai/`
 
-- **Python:** pandas, NumPy, SciPy (`linregress`), scikit-learn (`mean_squared_error`), matplotlib
-- **R:** base `lm` / `cor`, ggplot2
+| File | Purpose |
+|------|---------|
+| `PROMPTS.md` | Prompts used to generate/assist Part B work |
+| `CODE_REVIEW.md` | AI review of the Assignment 3 PR and follow-up notes |
+| `README_AI.md` | This AI-generated overview |
 
-## Relationship to `manual/`
-
-| Folder | Role |
-|--------|------|
-| `manual/` | Hand-built / student-driven Part A work |
-| `ai/` | AI-assisted Part B repeat of the same analysis + prompt/review docs |
+For the hand-written project description and manual workflow, see the root `README.md` and `manual/README`.
