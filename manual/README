@@ -1,13 +1,42 @@
-# SU26-7030-Assignment-2
-The goal of  this assignment was to build and compare simple linear regression models in python and R using jupyter notebooks. 
-Both make use of the same dataset ("regression_data") to compare the relationship between salary and years of experience. 
-Within each notebook, load the data, create a scatterplot, fit a linear regression model, and overlay the regression line on the plot. 
-# Tools and Libraries: 
-Files were created/edited in OSC OnDemand and Jupyter lab. 
-The python notebook uses pandas to import/work with the csv file, matplotlib to create the sscatterplot, and sklearn.linear_model to fit the model. 
-The R notebook uses read.csv to load the file, plot and model to create the scatter plot and fit the model, ggplot2 to overlay the regression line, and summary to evalluate the model. 
-# Results 
-Both notebooks create the same plot, as the same dataset was used, however there are very minor differences in the visual plot (ex. title placement and coloring). 
-#Scripts and Output
-The python and R notebooks were downloaded as executable scripts. The purpose of these scripts is to run the same analysis directly through the terminal. For this assignment, the same dataset was used, but the code can be used and only requires csv file names, and the x and y column names to run. Tp run the python script, use "python linear_regression_python.py regression_data-1.csv YearsExperience Salary". To run the R script, use "Rscript linear_regression_r.R regression_data-1.csv YearsExperience Salary". 
+#Assignment 3
 
+This repository contains linear regression analysis of salary versus years of experience,
+using Python and R. Assignment 2 created the initial notebooks and command-line scripts.
+Assignment 3 upgrades that work with model diagnostics, annotated plots,
+and a new workflow including pulll requests and tags.
+
+## Dataset
+
+- File: "manual/regression_data-1.csv"
+
+## Scripts (new filenames)
+
+- "manual/linear_model.py" – Python script run from the command line
+- "manual/linear_model.R" – R script run from the command line
+
+Both scripts:
+- accept the CSV filename and the X/Y column names as arguments
+- fit a linear regression
+- print slope, intercept, Pearson's correlation (r), and mean squared error (MSE)
+- create a scatter plot with a fitted line
+- annotate the plot with the equation, r, and MSE
+- save plots as "regression_plot_python.png" and "regression_plot_r.png"
+
+## Notebooks (updated for Assignment 3)
+
+- "manual/linear_model_python.ipynb'
+- "manual/linear_model_r.ipynb"
+
+Compared with Assignment 2, the notebooks now:
+- report slope, intercept, r, and MSE (not only R-squared / model summary)
+- annotate the regression plot with the fitted equation and diagnostics
+- include Markdown cells explaining what is calculated and how to interpret the results
+
+Assignment 2 files are still be present for reference.
+
+## How to run the scripts
+
+From the `manual` directory:
+
+"python linear_model.py regression_data-1.csv YearsExperience Salary"
+"Rscript linear_model.R regression_data-1.csv YearsExperience Salary"
